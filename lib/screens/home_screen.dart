@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/utils/data/product_data.dart';
+import 'package:shop_app/utils/widgets/product_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -97,6 +99,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  final product = products[index];
+                  return ProductCard(
+                    data: product,
+                    backgroundColor: index.isEven
+                        ? const Color.fromRGBO(216, 240, 253, 1)
+                        : const Color.fromRGBO(245, 247, 249, 1),
                   );
                 },
               ),
