@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/screens/product_details_screen.dart';
-import 'package:shop_app/utils/data/product_data.dart';
+import 'package:shop_app/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,10 +49,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // home: const HomeScreen(),
-      home: ProductDetailsPage(
-        product: products[0],
-      ),
+      home: const Home(),
     );
   }
 }
