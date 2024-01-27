@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:shop_app/utils/providers/cart_provider.dart';
 
 class ProductCard extends StatelessWidget {
   final Map<String, dynamic> data;
@@ -14,7 +12,6 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<CartProvider>(context).carts);
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
